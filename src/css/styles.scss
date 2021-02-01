@@ -1,0 +1,642 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import 'components/utils/animations.css';
+@import 'components/cosmetic/clouds.css';
+@import 'components/cosmetic/plane.css';
+@import 'components/cosmetic/ufo.css';
+@import 'components/cosmetic/sun.scss';
+@import 'components/mobile/mobile.css';
+@import 'components/sections/about.css';
+@import 'components/sections/projects.css';
+@import 'components/sections/social.css';
+@import 'components/loader.css';
+
+$cream: #F6EDD4;
+$black: #111111;
+$blue: #86ccf8;
+$pink: #ec86f8;
+$font: "Lato";
+
+@font-face {
+    font-family: 'don_josregular';
+    src: url('/fonts/donjose_black-webfont.woff2') format('woff2'),
+         url('/fonts/donjose_black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font--title: 'don_josregular';
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: $cream;
+	margin: 0;
+	overflow-x: hidden;
+	background-color: #111111;
+	background: url('/bg.jpg') repeat center;
+	background-size: 350px;
+	position: relative;
+
+	* {
+		box-sizing: border-box;
+	}
+}
+
+// `::-webkit-scrollbar {
+//     width: 0;
+//     background: $cream;
+// }
+
+.app__wrapper {
+	min-height: 100%;
+	width: 100vw;
+	padding: 0;
+}
+
+.grit {
+	mask-image: url('/textures/grit.png');
+	-webkit-mask-image: url('/textures/grit.png');
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: 0;
+	border-top: 0;
+	border-left: 0;
+	// max-height: 50%;
+	border-right: 0;
+	width: 100%;
+	text-transform: uppercase;
+	z-index: 1;
+
+	@media (max-width: 585px) {
+		min-height: 300px;
+	}
+
+	@media (min-width: 811px) {
+		// max-height: 70vh;
+	}
+}
+
+.header__logo {
+	font-size: clamp(15vw, 5.5rem, 16vw);
+    font-family: $font--title;
+    line-height: clamp(15vw, 5.5rem, 16vw);
+	color: $black;
+	z-index: 2;
+}
+
+.header__svg {
+	position: absolute;
+	top: 0;
+	left: -20%;
+	width: 120%;
+	height: 100%;
+	background: url('/svg/header.svg') no-repeat center;
+	background-size: contain;
+
+	@media (max-width: 585px) {
+		background-size: cover;
+	}
+}
+
+section {
+	display: flex;
+	z-index: 0;
+}
+
+.sect {
+	width: 100%;
+	height: 30vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	p {
+		font-family: $font;
+		color: $black;
+		font-size: clamp(2.5rem, 3rem, 7vw);
+		line-height: clamp(2.5rem, 3rem, 7vw);
+		z-index: 1;
+		font-weight: 900;
+		margin: 10px 0;
+		width: 100%;
+		padding: 0 20px;
+		max-width: 800px;
+
+		&:first-child {
+			padding-top: 20px;
+		}
+	}
+
+	&__one {
+		padding: 30px 0;
+		height: 50vh;
+
+		p {
+			color: $cream;
+		}
+	}
+
+	&__two {
+		height: auto;
+	}
+
+	&__bar-one-svg {
+		position: absolute;
+		top: -12px;
+		left: calc(50% - 105px);
+		width: 210px;
+		height: 110.5%;
+		background: url('/svg/bar1.svg') no-repeat center;
+		background-size: cover;
+		z-index: 0;
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		min-height: 600px;
+		position: relative;
+	}
+
+	&__box-svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url('/svg/box2.svg') no-repeat center;
+		background-size: contain;
+		z-index: 0;
+
+		@media (max-width: 991px) {
+			background-size: cover;
+			width: 100%;
+		}
+	}
+
+	&__skills {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.first {
+	margin-top: 12px;
+}
+
+.portfolio {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 318px;
+		position: relative;
+
+		&-inner {
+			max-width: 800px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 1;
+			padding: 0 20px;
+		}
+
+		h2 {
+			font-family: $font;
+			font-size: clamp(4rem, 5rem, 7vw);
+			color: $black;
+			font-weight: 900;
+			border: 0;
+			margin: 0;
+			border-bottom: 13px solid;
+			border-image: url('/portfolio/underline.svg');
+			border-image-slice: 125;
+
+			a {
+				position: relative;
+				text-decoration: none;
+				color: $black;
+				z-index: 1;
+
+				&::before {
+					content: attr(data-text);
+					position: absolute;
+					top: 0;
+					left: 0;
+					transform: translate(0, 0);
+					color: $blue;
+					width: 100%;
+					mix-blend-mode: screen;
+					z-index: -1;
+					transition: all .1s ease-in-out;
+				}
+
+				&::after {
+					content: attr(data-text);
+					position: absolute;
+					top: 0;
+					left: 0;
+					transform: translate(0, 0);
+					color: $pink;
+					width: 100%;
+					mix-blend-mode: screen;
+					z-index: -1;
+					transition: all .1s ease-in-out;
+				}
+
+				&:focus,
+				&:hover {
+					&::before {
+						transform: translate(3px, 3px);
+					}
+
+					&::after {
+						transform: translate(-3px, -3px);
+					}
+				}
+			}
+		}
+
+		p {
+			font-family: $font;
+			font-size: clamp(1.3rem, 1.8rem, 4vw);
+			color: $black;
+			margin: 0;
+		}
+
+		&-img {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-width: 250px;
+			width: 250px;
+			height: 250px;
+			z-index: 4;
+			// background: url('/portfolio/portfolio-blob-1.svg') no-repeat center;
+			// background-size: contain;
+
+			&--drafty {
+				background: url('/portfolio/drafty.svg') no-repeat center;
+				background-size: contain;
+				width: 40%;
+				height: 40%;
+				padding: 10px;
+				z-index: 4;
+			}
+		}
+
+		&-img-2 {
+			@extend .portfolio__item-img;
+			// background: url('/portfolio/portfolio-blob-2.svg') no-repeat center;
+			// background-size: contain;
+
+			&--nrdstr {
+				background: url('/portfolio/nrdstr.svg') no-repeat center;
+				background-size: contain;
+				width: 35%;
+				height: 35%;
+				padding: 10px;
+				z-index: 4;
+			}
+		}
+
+		&-blob {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		&-description {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			margin-left:20px;
+			z-index: 1;
+		}
+	}
+
+	&__box {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+
+		&-one {
+			background: url('/portfolio/portfolio-box-1.svg') no-repeat center;
+			background-size: contain;
+		}
+
+		&-two {
+			background: url('/portfolio/portfolio-box-2.svg') no-repeat center;
+			background-size: contain;
+		}
+
+		@media (max-width: 991px) {
+			width: 100%;
+
+			&-one,
+			&-two {
+				background-size: cover;
+			}
+		}
+	}
+}
+
+.portfolio-divider {
+	width: 100%;
+	max-width: 800px;
+	height: 100px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__bar-one {
+		background: url('/portfolio/vertical-line-1.svg') no-repeat center;
+		background-size: contain;
+		width: 50%;
+		height: 155px;
+	}
+
+	&__bar-two {
+		background: url('/portfolio/vertical-line-1.svg') no-repeat center;
+		background-size: contain;
+		transform: rotate(180deg);
+		width: 50%;
+		height: 153px;
+	}
+}
+
+.socials {
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+}
+
+.icon {
+	width: 70px;
+	height: 70px;
+	z-index: 1;
+	margin: 0 7px;
+
+	&--github {
+		background: url('/svg/github.svg') no-repeat center;
+		background-size: contain;
+	}
+
+	&--codepen {
+		background: url('/svg/codepen.svg') no-repeat center;
+		background-size: contain;
+	}
+
+	&--linkedin {
+		background: url('/svg/linkedin.svg') no-repeat center;
+		background-size: contain;
+	}
+
+	&--florida {
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+		background: url('/svg/florida.svg') no-repeat center;
+		background-size: contain;
+	}
+}
+
+.skill-icon {
+	position: relative;
+	width: 120px;
+	height: 120px;
+	z-index: 2;
+	margin: 0 7px 10px 0;
+
+	@media (max-width: 585px) {
+		width: 80px;
+		height: 80px;
+	}
+
+	&--javascript {
+		position: relative;
+		background: url('/svg/javascript.svg') no-repeat center;
+		background-size: contain;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+
+		&-blue {
+			background: url('/svg/javascript-blue.svg') no-repeat center;
+			background-size: contain;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			mix-blend-mode: screen;
+			top: 2px;
+			left: 2px;
+			z-index: 1;
+			transition: all .2s ease-in-out;
+		}
+
+		&-pink {
+			background: url('/svg/javascript-pink.svg') no-repeat center;
+			background-size: contain;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			mix-blend-mode: screen;
+			top: -2px;
+			left: -2px;
+			z-index: 1;
+			transition: all .2s ease-in-out;
+		}
+
+		// &:hover {
+		// 	.skill-icon--javascript-blue {
+		// 		top: 5px;
+		// 		left: 5px;
+		// 	}
+
+		// 	.skill-icon--javascript-pink {
+		// 		top: -5px;
+		// 		left: -5px;
+		// 	}
+		// }
+	}
+
+	&--gatsby {
+		position: relative;
+		background: url('/svg/gatsby.svg') no-repeat center;
+		background-size: contain;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+
+		&-blue {
+			background: url('/svg/gatsby-blue.svg') no-repeat center;
+			background-size: contain;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			mix-blend-mode: screen;
+			top: 2px;
+			left: 2px;
+			z-index: 1;
+			transition: all .2s ease-in-out;
+		}
+
+		&-pink {
+			background: url('/svg/gatsby-pink.svg') no-repeat center;
+			background-size: contain;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			mix-blend-mode: screen;
+			top: -2px;
+			left: -2px;
+			z-index: 1;
+			transition: all .2s ease-in-out;
+		}
+	}
+
+	&--react {
+		position: relative;
+		background: url('/svg/react.svg') no-repeat center;
+		background-size: contain;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+
+		&-blue {
+			background: url('/svg/react-blue.svg') no-repeat center;
+			background-size: contain;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			mix-blend-mode: screen;
+			top: 2px;
+			left: 2px;
+			z-index: 1;
+			transition: all .2s ease-in-out;
+		}
+
+		&-pink {
+			background: url('/svg/react-pink.svg') no-repeat center;
+			background-size: contain;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			mix-blend-mode: screen;
+			top: -2px;
+			left: -2px;
+			z-index: 1;
+			transition: all .2s ease-in-out;
+		}
+	}
+
+	&--pen {
+		background: url('/svg/pencil.svg') no-repeat center;
+		background-size: contain;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+
+		&-blue {
+			background: url('/svg/pen-blue.svg') no-repeat center;
+			background-size: contain;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			mix-blend-mode: screen;
+			top: 2px;
+			left: 2px;
+			z-index: 1;
+			transition: all .2s ease-in-out;
+		}
+
+		&-pink {
+			background: url('/svg/pen-pink.svg') no-repeat center;
+			background-size: contain;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			mix-blend-mode: screen;
+			top: -2px;
+			left: -2px;
+			z-index: 1;
+			transition: all .2s ease-in-out;
+		}
+	}
+}
+
+.blob-1 {
+	fill: $black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-origin: 50% 50%;
+	animation: move 52s ease-in-out infinite;
+	z-index: 3;
+  }
+
+.blob-2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	fill: $pink;
+	transform-origin: 50% 50%;
+	animation: move 48s ease-in-out infinite;
+	z-index: 2;
+}
+
+.blob-3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: $blue;
+	width: 100%;
+	height: 100%;
+	transform-origin: 50% 50%;
+	animation: move 42s ease-in-out infinite;
+	z-index: 1;
+}
+
+  @keyframes move {
+	0%   { transform: scale(1) rotate(0);}
+	25%  { transform: scale(1) rotate(55deg); }
+	50%  { transform: scale(1) rotate(180deg); }
+	75%  { transform: scale(1) rotate(55deg);}
+	100% { transform: scale(1) rotate(0);}
+  }
