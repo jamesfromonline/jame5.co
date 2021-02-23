@@ -1,38 +1,20 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-import React, { useRef, useEffect } from "react"
+import React, { useRef } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
 import Div100vh from 'react-div-100vh'
-import "./layout.css"
-import '../css/styles.scss'
+import '../styles/styles.scss'
 
 const Layout = ({ children, progressColors }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   const overlay = useRef(null)
-  // useEffect(() => {
-  // }, [progress])
+
+  const overlayStyle = {
+    opacity: progressColors,
+    background: `linear-gradient(${(progressColors * 255).toFixed(0)}deg, #86ccf8, #ec86f8)`
+  }
 
   return (
     <Div100vh>
       <main className='app__wrapper'>
-        <div ref={overlay} className='moving-overlay--portfolio grit' style={{ opacity: `${progressColors}` }} />
+        <div ref={overlay} className='moving-overlay--portfolio grit' style={overlayStyle} />
         {children}
       </main>
     </Div100vh>

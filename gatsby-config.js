@@ -17,6 +17,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `photoshop`,
+        path: `${__dirname}/src/photoshop`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `favicon`,
         path: `${__dirname}/src/favicon`,
       },
