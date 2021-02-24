@@ -4,9 +4,9 @@ import Div100vh from 'react-div-100vh'
 import '../styles/styles.scss'
 
 const Layout = ({ children, progressColors }) => {
-  const overlay = useRef(null)
+  const underlay = useRef(null)
 
-  const overlayStyle = {
+  const underlayStyle = {
     opacity: progressColors,
     background: `linear-gradient(${(progressColors * 255).toFixed(0)}deg, #86ccf8, #ec86f8)`
   }
@@ -14,7 +14,7 @@ const Layout = ({ children, progressColors }) => {
   return (
     <Div100vh>
       <main className='app__wrapper'>
-        <div ref={overlay} className='moving-overlay--portfolio grit' style={overlayStyle} />
+        <div ref={underlay} className='gradient-underlay grit' style={underlayStyle} />
         {children}
       </main>
     </Div100vh>

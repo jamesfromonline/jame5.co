@@ -1,0 +1,30 @@
+
+@mixin flex($justify-content: false, $flex: false, $flex-direction: false, $align-items: false) {
+    display: flex;
+
+    @if $justify-content != false {
+      justify-content: $justify-content;
+    }
+
+    @if $flex != false {
+      flex: $flex;
+    }
+
+    @if $flex-direction != false {
+      flex-direction: $flex-direction;
+    }
+
+    @if $align-items != false {
+      align-items: $align-items;
+    }
+  }
+
+  @mixin size($w: 100%, $h: $w) {
+    width: $w;
+    height: $h;
+  }
+
+  @mixin background($url, $size: contain) {
+    background: url($url) no-repeat center;
+    background-size: $size;
+  }

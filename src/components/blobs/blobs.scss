@@ -1,0 +1,22 @@
+.blob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size();
+    transform-origin: 50% 50%;
+
+    &-1 {
+        fill: $black;
+        z-index: 3;
+      }
+
+    &-2 {
+        fill: $pink;
+        z-index: 2;
+    }
+
+    &-3 {
+        fill: $blue;
+        z-index: 1;
+    }
+}

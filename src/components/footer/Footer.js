@@ -9,10 +9,10 @@ const Footer = () => {
                 <path id="blob2" style={{ visibility: 'hidden' }} dataname="Shape 320 1" className="cls-1" d="M136.168,3.74c29.047,7.55,67.8,24.97,80.991,37.471,36.694,34.781,50.7,16.043,67.83,66.84,3.074,9.117,4.187,30.565,6.074,41.522,0.338,11.477-1.349,26-1.012,37.471-3.037,12.489-4.05,15.867-7.087,28.357-3.935,9.473-24.718,24.981-30.371,32.407-34.388,45.169-32.625,17.471-89.09,42.534-29.058,12.9-61.811,1.738-79.979-6.076-44.956-19.337-59.9-18.211-72.892-69.878-3.384-13.453,6.408-57.679,7.087-75.955,0.971-26.17,13.762-60.739,26.322-76.967C54.16,48.393,51.6,38.726,65.3,29.059c7.086-5.738,26.12-8.418,41.507-15.191C115.205,8.718,114.728,8.83,136.168,3.74Z" />
             </svg>
             {/* <a href='mailto:jamesobriendev@gmail.com' title='email me' className='img__mail grit' /> */}
-            <div className='socials'>
-                <a className='link icon icon--github grit' href='https://github.com/jamesfromonline' />
-                <a className='link icon icon--codepen grit' href='https://codepen.io/jamesfromonline' />
-                <a className='link icon icon--linkedin grit' href='https://linkedin.com/in/jamesfromonline' />
+            <div className='social-icons'>
+                <a className='link social-icon social-icon--github grit' href='https://github.com/jamesfromonline' />
+                <a className='link social-icon social-icon--codepen grit' href='https://codepen.io/jamesfromonline' />
+                <a className='link social-icon social-icon--linkedin grit' href='https://linkedin.com/in/jamesfromonline' />
             </div>
             <h3 className='footer__tagline text text--black text--display text--center grit'>
                 <span className='footer__blob-green' />

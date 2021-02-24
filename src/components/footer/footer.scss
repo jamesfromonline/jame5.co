@@ -1,0 +1,77 @@
+.footer {
+	@include flex($flex-direction: column, $justify-content: center, $align-items: center);
+	position: relative;
+	width: 100vw;
+	margin: 0;
+	margin-top: 80px;
+	border-top: 0;
+	border-left: 0;
+	padding: 50px 0;
+	border-right: 0;
+	z-index: 1;
+
+	@media (max-width: 585px) {
+		min-height: 300px;
+	}
+
+	&__svg {
+		@include background('/svg/header.svg', cover);
+		@include size();
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: scale(-1);
+	}
+
+	&__tagline {
+		border-bottom: 13px solid;
+		border-image: url('/portfolio/underline.svg');
+		border-image-slice: 125;
+		padding: 0 0 20px 0;
+	}
+
+	&__blob-green {
+		@include background('/svg/blog-green.svg');
+		@include size(32px);
+		margin-right: 7px;
+		display: inline-block;
+	}
+}
+
+.social-icons {
+	@include flex($justify-content: center);
+	padding: 20px 0;
+}
+
+.social-icon {
+	@include size(70px);
+	z-index: 1;
+	margin: 0 7px;
+
+	&--github {
+		@include background('/svg/github.svg');
+	}
+
+	&--codepen {
+		@include background('/svg/codepen.svg');
+	}
+
+	&--linkedin {
+		@include background('/svg/linkedin.svg');
+	}
+}
+
+.img__mail {
+	@include background('/svg/mail-blob.svg');
+	@include size(300px);
+	padding: 20px 0;
+	z-index: 1;
+
+	@media (max-width: 811px) {
+		@include size(250px);
+	}
+
+	@media (max-width: 585px) {
+		@include size(200px);
+	}
+}

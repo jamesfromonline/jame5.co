@@ -1,0 +1,146 @@
+.portfolio {
+	@include flex($flex-direction: column, $justify-content: center, $align-items: center);
+	width: 100vw;
+
+	&__item {
+		@include flex($justify-content: center, $align-items: center);
+		@include size(100%, 318px);
+		position: relative;
+
+		&-inner {
+			@include flex($justify-content: center, $align-items: center);
+			max-width: 800px;
+			padding: 0 20px;
+			z-index: 1;
+		}
+
+		h2 {
+			font-family: $font;
+			font-size: clamp(4rem, 5rem, 7vw);
+			color: $black;
+			font-weight: 900;
+			border: 0;
+			margin: 0;
+			border-bottom: 13px solid;
+			border-image: url('/portfolio/underline.svg');
+			border-image-slice: 125;
+
+			a {
+				position: relative;
+				text-decoration: none;
+				color: $black;
+				z-index: 1;
+
+				&::before {
+					content: attr(data-text);
+					position: absolute;
+					top: 0;
+					left: 0;
+					transform: translate(0, 0);
+					color: $blue;
+					width: 100%;
+					mix-blend-mode: screen;
+					z-index: -1;
+					transition: all .1s ease-in-out;
+				}
+
+				&::after {
+					content: attr(data-text);
+					position: absolute;
+					top: 0;
+					left: 0;
+					transform: translate(0, 0);
+					color: $pink;
+					width: 100%;
+					mix-blend-mode: screen;
+					z-index: -1;
+					transition: all .1s ease-in-out;
+				}
+
+				&:focus,
+				&:hover {
+					&::before {
+						transform: translate(3px, 3px);
+					}
+
+					&::after {
+						transform: translate(-3px, -3px);
+					}
+				}
+			}
+		}
+
+		&-img {
+			@include flex($justify-content: center, $align-items: center);
+			position: relative;
+			min-width: 250px;
+			@include size(250px);
+			z-index: 4;
+
+			&--drafty {
+				@include background('/portfolio/drafty.svg');
+				@include size(40%);
+				padding: 10px;
+				z-index: 4;
+			}
+
+			&--nrdstr {
+				@include background('/portfolio/nrdstr.svg');
+				@include size(35%);
+				padding: 10px;
+				z-index: 4;
+			}
+
+			&--zalories {
+				@include background('/portfolio/zalories.svg');
+				@include size(35%);
+				padding: 10px;
+				z-index: 4;
+			}
+		}
+
+		&-blob {
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include size();
+			overflow: hidden;
+		}
+
+		&-description {
+			@include flex($flex-direction: column, $justify-content: center, $align-items: flex-start);
+			margin-left:20px;
+			z-index: 1;
+		}
+	}
+
+	&__box {
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include size();
+		z-index: 0;
+
+		&-one {
+			@include background('/portfolio/portfolio-box-1.svg');
+		}
+
+		&-two {
+			@include background('/portfolio/portfolio-box-2.svg');
+		}
+
+		&-three {
+			@include background('/portfolio/portfolio-box-3.svg');
+		}
+
+		@media (max-width: 991px) {
+			width: 100%;
+
+			&-one,
+			&-two,
+			&-three {
+				background-size: cover;
+			}
+		}
+	}
+}
