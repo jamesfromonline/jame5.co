@@ -15,10 +15,10 @@
 	}
 
 	&__svg {
-		@include background('/svg/header.svg', cover);
+		@include background('/svg/header.svg', bottom, cover);
 		@include size();
 		position: absolute;
-		top: 0;
+		bottom: 0;
 		left: 0;
 		transform: scale(-1);
 	}

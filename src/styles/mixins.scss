@@ -24,7 +24,7 @@
     height: $h;
   }
 
-  @mixin background($url, $size: contain) {
-    background: url($url) no-repeat center;
+  @mixin background($url, $position: center, $size: contain) {
+    background: url($url) no-repeat $position;
     background-size: $size;
   }

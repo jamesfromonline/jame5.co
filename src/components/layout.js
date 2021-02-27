@@ -1,23 +1,30 @@
 import React, { useRef } from "react"
 import PropTypes from "prop-types"
 import Div100vh from 'react-div-100vh'
+import Stars from './stars/Stars'
 import '../styles/styles.scss'
 
-const Layout = ({ children, progressColors }) => {
+const Layout = ({ children, progressColors, progressStars }) => {
   const underlay = useRef(null)
 
   const underlayStyle = {
     opacity: progressColors,
-    background: `linear-gradient(${(progressColors * 255).toFixed(0)}deg, #86ccf8, #ec86f8)`
+    background: `linear-gradient(${Math.floor(progressColors * 255)}deg, #86ccf8, #ec86f8)`
+  }
+
+  const starsStyle = {
+    display: progressStars > 0 ? 'flex' : 'none',
+    opacity: progressStars
   }
 
   return (
-    <Div100vh>
+    <div>
       <main className='app__wrapper'>
         <div ref={underlay} className='gradient-underlay grit' style={underlayStyle} />
         {children}
       </main>
-    </Div100vh>
+      <Stars styles={starsStyle} />
+    </div>
   )
 }
 

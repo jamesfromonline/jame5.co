@@ -24,6 +24,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-particles-js": "^3.4.1",
+    "react-protected-mailto": "^1.0.3",
     "react-scroll-trigger": "^0.6.10",
     "react-spring": "^8.0.27",
     "react-tsparticles": "^1.18.11"

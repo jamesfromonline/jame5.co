@@ -13,11 +13,13 @@ import Footer from '../components/footer/Footer'
 
 const IndexPage = () => {
   const [progressColors, setProgressColors] = useState(0)
-  const handleProgressColors = ({ progress }) => setProgressColors(progress.toFixed(2))
+  const [progressStars, setProgressStars] = useState(0)
+  const handleProgressColors = ({ progress }) => setProgressColors(progress.toFixed(4))
   const handleProgressDark = ({ progress }) => setProgressColors(1 - progress.toFixed(2))
+  const handleProgressStars = ({ progress }) => setProgressStars(progress.toFixed(4))
 
   return (
-    <Layout progressColors={progressColors}>
+    <Layout progressColors={progressColors} progressStars={progressStars}>
       <SEO title="Web Development and Graphic Dabblery" />
       <Header />
       <IntroHeader />
@@ -41,6 +43,7 @@ const IndexPage = () => {
 
       <ScrollTrigger onProgress={handleProgressDark} />
       <Divider num='two' />
+      <ScrollTrigger onProgress={handleProgressStars} />
       <PhotoshopBox />
       <PhotoshopGrid />
       <Footer />

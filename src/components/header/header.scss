@@ -21,7 +21,7 @@ header {
 
 .header__logo {
 	@include size(100%, 200px);
-	@include background('/svg/james-logo.svg', cover);
+	@include background('/svg/james-logo.svg', center, cover);
 	margin-bottom: 6rem;
 	color: $black;
 	z-index: 2;
@@ -32,9 +32,13 @@ header {
 .header__svg {
 	position: absolute;
 	top: 0;
-	left: -20%;
-	@include size(120%, 100%);
-	@include background('/svg/header.svg', cover);
+	left: 0;
+	@include size(100%, 100%);
+	@include background('/svg/header.svg', top, cover);
+
+	@media (min-width: 2100px) {
+		background-position-y: 115%;
+	}
 }
 
 .img__james {

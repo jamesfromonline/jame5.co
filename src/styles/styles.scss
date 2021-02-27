@@ -3,8 +3,10 @@
 @import 'mixins';
 @import 'text';
 @import 'section';
-@import '../components/header/header';
+@import '../components/stars/stars';
 @import '../components/blobs/blobs';
+@import '../components/email/email';
+@import '../components/header/header';
 @import '../components/footer/footer';
 @import '../components/divider/divider';
 @import '../components/photoshop/photoshop';
@@ -62,3 +64,4 @@ body {
 	mix-blend-mode: difference;
 	z-index: 0;
 }
+
