@@ -9,7 +9,7 @@ const Layout = ({ children, progressColors, progressStars }) => {
 
   const underlayStyle = {
     opacity: progressColors,
-    background: `linear-gradient(${Math.floor(progressColors * 255)}deg, #86ccf8, #ec86f8)`
+    background: `linear-gradient(212deg, #86ccf8, #ec86f8)`
   }
 
   const starsStyle = {

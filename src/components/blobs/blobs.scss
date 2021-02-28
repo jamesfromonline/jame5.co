@@ -4,6 +4,7 @@
     left: 0;
     @include size();
     transform-origin: 50% 50%;
+    transition: all .1 linear;
 
     &-1 {
         fill: $black;
