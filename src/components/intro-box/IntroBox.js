@@ -24,10 +24,9 @@ const IntroBox = () => {
               <span className='text__hover text__hover--pink'> javascript</span>,
               <span className='text__hover text__hover--blue'> react</span>,
               <span className='text__hover text__hover--pink'> gatsby</span>,
-              <span className='text__hover text__hover--blue'> graphql</span>,
-              <span className='text__hover text__hover--pink'> css/scss</span>,
-              <span className='text__hover text__hover--blue'> photoshop</span>,
-              and <span className='text__hover text__hover--pink'>node</span>.
+              <span className='text__hover text__hover--blue'> css/scss</span>,
+              <span className='text__hover text__hover--pink'> photoshop</span>,
+              and <span className='text__hover text__hover--blue'>node</span>.
             </p>
 
         <div className='section__box-svg grit' />

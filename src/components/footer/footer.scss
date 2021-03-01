@@ -27,7 +27,9 @@
 		border-bottom: 13px solid;
 		border-image: url('/portfolio/underline.svg');
 		border-image-slice: 125;
-		padding: 0 0 20px 0;
+		padding: 0 0 10px 0;
+		font-weight: 900;
+		margin-bottom: 0;
 	}
 
 	&__blob-green {
@@ -35,6 +37,12 @@
 		@include size(32px);
 		margin-right: 7px;
 		display: inline-block;
+	}
+
+	&__copyright {
+		position: absolute;
+		bottom: 5px;
+		margin: 0;
 	}
 }
 
@@ -47,6 +55,7 @@
 	@include size(70px);
 	z-index: 1;
 	margin: 0 7px;
+	transition: all .15s ease-in-out;
 
 	&--github {
 		@include background('/svg/github.svg');
@@ -58,6 +67,11 @@
 
 	&--linkedin {
 		@include background('/svg/linkedin.svg');
+	}
+
+	&:focus,
+	&:hover {
+		transform: scale(1.05);
 	}
 }
 

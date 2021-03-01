@@ -12,6 +12,16 @@
 		width: 100%;
 		padding: 0 20px;
 		max-width: 800px;
+
+		@media (max-width: $mobile) {
+			font-size: clamp(2.2rem, 2.2rem, 7vw);
+			line-height: clamp(2.2rem, 2.2rem, 7vw);
+		}
+	}
+
+	&--small {
+		font-size: 1rem;
+		line-height: 1rem;
 	}
 
 	&--regular {

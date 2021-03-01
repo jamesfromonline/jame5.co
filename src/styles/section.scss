@@ -25,16 +25,26 @@
 		@include size(210px, 113.5%);
 		@include background('/svg/bar1.svg', center, cover);
 		z-index: 0;
+
+		@media (max-width: $mobile) {
+			height: 121%;
+		}
 	}
 
 	&__bar-two-svg {
 		position: absolute;
 		top: -28px;
 		left: calc(50% - 105px);
-		@include size(210px, 111%);
+		@include size(210px, 111.5%);
 		@include background('/svg/bar1.svg', center, cover);
 		transform: rotate(180deg);
 		z-index: 0;
+
+		@media (max-width: $mobile) {
+			top: -33.5px;
+			height: 117.7%;
+			transform: rotate(182deg);
+		}
 	}
 
 	&__box {

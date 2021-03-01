@@ -1,17 +1,27 @@
 .portfolio {
 	@include flex($flex-direction: column, $justify-content: center, $align-items: center);
 	width: 100vw;
+	z-index: 1;
+	position: relative;
 
 	&__item {
 		@include flex($justify-content: center, $align-items: center);
 		@include size(100%, 318px);
 		position: relative;
 
+		@media (max-width: $mobile) {
+			height: 380px;
+		}
+
 		&-inner {
 			@include flex($justify-content: center, $align-items: center);
 			max-width: 800px;
 			padding: 0 20px;
 			z-index: 1;
+
+			@media (max-width: $mobile) {
+				flex-direction: column;
+			}
 		}
 
 		h2 {
@@ -24,6 +34,13 @@
 			border-bottom: 13px solid;
 			border-image: url('/portfolio/underline.svg');
 			border-image-slice: 125;
+
+			@media (max-width: $mobile) {
+				font-size: clamp(3.5rem, 4.5rem, 7vw);
+				text-align: center;
+				// width: 100%;
+				border-bottom-width: 8px;
+			}
 
 			a {
 				position: relative;
@@ -77,6 +94,11 @@
 			@include size(250px);
 			z-index: 4;
 
+			@media (max-width: $mobile) {
+				min-width: 180px;
+				@include size(180px);
+			}
+
 			&--drafty {
 				@include background('/portfolio/drafty.svg');
 				@include size(40%);
@@ -111,6 +133,20 @@
 			@include flex($flex-direction: column, $justify-content: center, $align-items: flex-start);
 			margin-left:20px;
 			z-index: 1;
+			position: relative;
+
+			@media (max-width: $mobile) {
+				top: -28px;
+				margin: 0;
+				width: 100%;
+				align-items: center;
+				padding-bottom: 15px;
+				// padding: 0 15px;
+
+				p {
+					margin-top: 7px;
+				}
+			}
 		}
 	}
 
