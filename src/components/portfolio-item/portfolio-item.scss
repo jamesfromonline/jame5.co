@@ -75,6 +75,12 @@
 					transition: all .1s ease-in-out;
 				}
 
+				@media (max-width: $mobile) {
+					&::before, &::after {
+						display: none;
+					}
+				}
+
 				&:focus,
 				&:hover {
 					&::before {
