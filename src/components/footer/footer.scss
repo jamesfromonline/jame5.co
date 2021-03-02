@@ -24,7 +24,7 @@
 	}
 
 	&__tagline {
-		border-bottom: 13px solid;
+		border-bottom: 12px solid;
 		border-image: url('/portfolio/underline.svg');
 		border-image-slice: 125;
 		padding: 0 0 10px 0;
@@ -34,7 +34,7 @@
 
 	&__blob-green {
 		@include background('/svg/blog-green.svg');
-		@include size(32px);
+		@include size(27px);
 		margin-right: 7px;
 		display: inline-block;
 	}

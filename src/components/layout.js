@@ -1,11 +1,9 @@
-import React, { useRef, useEffect, useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
-import Div100vh from 'react-div-100vh'
 import Stars from './stars/Stars'
 import '../styles/styles.scss'
 
 const Layout = ({ children, progressColors, progressStars }) => {
-  const [styles, setStyles] = useState({ opacity: 0 })
 
   let underlayStyle = {
     opacity: progressColors
