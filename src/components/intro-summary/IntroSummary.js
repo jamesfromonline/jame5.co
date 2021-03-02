@@ -1,11 +1,11 @@
 import React from 'react'
 
-const IntroHeader = () => (
+const IntroSummary = () => (
     <section className='section section--large'>
         <p style={{ paddingTop: 20 }} className='text text--display text--white text--center grit'>
-            a full stack web dev.
+            a frontend web dev.
         </p>
     </section>
 )
 
-export default IntroHeader
+export default IntroSummary

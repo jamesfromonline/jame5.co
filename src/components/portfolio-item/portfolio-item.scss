@@ -27,10 +27,12 @@
 		h2 {
 			font-family: $font;
 			font-size: clamp(4rem, 5rem, 7vw);
+			line-height: clamp(4rem, 5rem, 7vw);
 			color: $black;
 			font-weight: 900;
 			border: 0;
 			margin: 0;
+			padding: 0 5px;
 			border-bottom: 12px solid;
 			border-image: url('/portfolio/underline.svg');
 			border-image-slice: 125;
@@ -38,7 +40,6 @@
 			@media (max-width: $mobile) {
 				font-size: clamp(3.5rem, 4.5rem, 7vw);
 				text-align: center;
-				// width: 100%;
 				border-bottom-width: 8px;
 			}
 
@@ -53,7 +54,7 @@
 					position: absolute;
 					top: 0;
 					left: 0;
-					transform: translate(0, 0);
+					transform: translate(0, 8px);
 					color: $blue;
 					width: 100%;
 					mix-blend-mode: screen;
@@ -66,7 +67,7 @@
 					position: absolute;
 					top: 0;
 					left: 0;
-					transform: translate(0, 0);
+					transform: translate(0, 8px);
 					color: $pink;
 					width: 100%;
 					mix-blend-mode: screen;
@@ -77,11 +78,11 @@
 				&:focus,
 				&:hover {
 					&::before {
-						transform: translate(3px, 3px);
+						transform: translate(3px, 11px);
 					}
 
 					&::after {
-						transform: translate(-3px, -3px);
+						transform: translate(-3px, 6px);
 					}
 				}
 			}
@@ -141,7 +142,6 @@
 				width: 100%;
 				align-items: center;
 				padding-bottom: 15px;
-				// padding: 0 15px;
 
 				p {
 					margin-top: 7px;

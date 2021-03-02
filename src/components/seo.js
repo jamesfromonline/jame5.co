@@ -46,8 +46,24 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: `https://www.jame5.co`
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
+        },
+        {
+          property: `og:image`,
+          content: '/social.jpg',
+        },
+        {
+          name: `twitter:card`,
+          content: `summary_large_image`,
+        },
+        {
+          name: `twitter:url`,
+          content: `https://www.jame5.co`,
         },
         {
           name: `twitter:creator`,
@@ -56,6 +72,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:title`,
           content: title,
+        },
+        {
+          name: `twitter:image`,
+          content: '/social.jpg'
         },
         {
           name: `twitter:description`,

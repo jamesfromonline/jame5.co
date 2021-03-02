@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ScrollTrigger from 'react-scroll-trigger'
 import Header from '../components/header/Header'
-import IntroHeader from '../components/intro-header/IntroHeader'
+import IntroSummary from '../components/intro-summary/IntroSummary'
 import IntroBox from '../components/intro-box/IntroBox'
 import PortfolioItem from '../components/portfolio-item/PortfolioItem'
 import PhotoshopBox from "../components/photoshop/PhotoshopBox"
@@ -22,7 +22,7 @@ const IndexPage = () => {
     <Layout progressColors={progressColors} progressStars={progressStars}>
       <SEO title="Web Development and Graphic Dabblery" />
       <Header />
-      <IntroHeader />
+      <IntroSummary />
       <IntroBox />
       <Divider num='one' />
       <ScrollTrigger onProgress={handleProgressColors} />
