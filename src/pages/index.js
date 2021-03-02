@@ -32,7 +32,7 @@ const IndexPage = () => {
         box='one' />
 
       <PortfolioItem name='zalories'
-        url='#'
+        url='https://zalories.jame5.co'
         description='a super simple calorie tracking webapp.'
         box='two' />
 
