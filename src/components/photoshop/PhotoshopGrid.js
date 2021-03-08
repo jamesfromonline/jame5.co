@@ -23,7 +23,7 @@ const PhotoshopGrid = () => {
     return (
         <section className='photoshop'>
             <p style={{ paddingTop: 20 }} className='text text--display text--white grit'>
-                i also enjoy playing around in <span className='text--pink'>photoshop</span> and seeing what i can come up with.
+                i also enjoy dabbling with <span className='text--pink'>photoshop</span> and seeing what i can come up with.
                 </p>
             <div className='photoshop-grid__container'>
                 <div id='ig' className='photoshop-grid'>
