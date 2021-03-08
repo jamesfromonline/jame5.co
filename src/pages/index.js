@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ScrollTrigger from 'react-scroll-trigger'
@@ -17,8 +17,11 @@ const IndexPage = () => {
   const handleProgressColors = ({ progress }) => setProgressColors(progress.toFixed(4))
   const handleProgressDark = ({ progress }) => setProgressColors(1 - progress.toFixed(2))
   const handleProgressStars = ({ progress }) => setProgressStars(progress.toFixed(4))
-  console.log('%clinkedin: https://linkedin.com/in/jamesfromonline', 'color: #fefefe; background-color: #0072b1; font-weight: bold; padding: 10px')
-  console.log('%cresume: https://jame5.co/JamesOBrien_Resume.pdf', 'color: #fefefe; background-color: #111; font-weight: bold; padding: 10px')
+
+  useEffect(() => {
+    console.log('%clinkedin: https://linkedin.com/in/jamesfromonline', 'color: #fefefe; background-color: #0072b1; font-weight: bold; padding: 10px')
+    console.log('%cresume: https://jame5.co/JamesOBrien_Resume.pdf', 'color: #fefefe; background-color: #111; font-weight: bold; padding: 10px')
+  }, [])
 
   return (
     <Layout progressColors={progressColors} progressStars={progressStars}>
