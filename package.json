@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "jame5.co",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "a frontend web development portfolio. built with gatsby, react, and css/scss.",
+  "version": "1.0",
+  "author": "james <jamesfromonline@gmail.com>",
   "dependencies": {
     "gatsby": "^2.32.10",
     "gatsby-image": "^2.11.0",
@@ -42,9 +42,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/jamesfromonline/jame5.co"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/jamesfromonline/jame5.co/issues"
   }
 }
