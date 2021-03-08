@@ -20,7 +20,7 @@ header {
 }
 
 .header__logo {
-	@include size(100%, 200px);
+	@include size(100%, 165px);
 	@include background('/svg/james-logo.svg', center, cover);
 	margin-bottom: 6rem;
 	color: $black;

@@ -22,7 +22,7 @@
 		position: absolute;
 		top: -12px;
 		left: calc(50% - 105px);
-		@include size(210px, 113.5%);
+		@include size(210px, 112.8%);
 		@include background('/svg/bar1.svg', center, cover);
 		z-index: 0;
 
@@ -35,7 +35,7 @@
 		position: absolute;
 		top: -28px;
 		left: calc(50% - 105px);
-		@include size(210px, 111.5%);
+		@include size(210px, 111%);
 		@include background('/svg/bar1.svg', center, cover);
 		transform: rotate(180deg);
 		z-index: 0;

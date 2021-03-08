@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Mailto from 'react-protected-mailto'
 
-
 const Email = () => {
     const [visible, setVisible] = useState(false)
     const toggleVisible = () => !visible && setVisible(true)
