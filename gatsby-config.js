@@ -3,9 +3,11 @@ module.exports = {
     title: `JAME5`,
     description: `I'm a full stack web developer who likes to create unique projects using tools like JavaScript, React, Gatsby, Graphql, CSS/SCSS, Photoshop, and Node.`,
     author: ``,
+    siteUrl: `https://www.jame5.co`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -13,6 +15,14 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.jame5.co',
+        sitemap: 'https://www.jame5.co/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
