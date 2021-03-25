@@ -16,7 +16,7 @@ const IntroBox = () => {
   }
 
   return (
-    <section className='section section--regular'>
+    <section className='section section--regular section__introbox'>
       <div ref={intro} className='section__box skills-section'>
         <SkillIcons />
         <p style={{ paddingBottom: 3 }} className='text text--display grit'>

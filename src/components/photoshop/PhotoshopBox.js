@@ -1,7 +1,7 @@
 import React from 'react'
 
 const PhotoshopBox = () => (
-    <section className='section section--regular' style={{ top: -8 }}>
+    <section className='section section--regular section__photoshop-box' style={{ top: -8 }}>
         <div className='section__box'>
             <div className='photoshop__video'>
                 <iframe title='photoshop video'

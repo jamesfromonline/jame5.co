@@ -8,7 +8,6 @@ import IntroBox from '../components/intro-box/IntroBox'
 import PortfolioItem from '../components/portfolio-item/PortfolioItem'
 import PhotoshopBox from "../components/photoshop/PhotoshopBox"
 import PhotoshopGrid from "../components/photoshop/PhotoshopGrid"
-import Divider from '../components/divider/Divider'
 import Footer from '../components/footer/Footer'
 
 const IndexPage = () => {
@@ -29,7 +28,6 @@ const IndexPage = () => {
       <Header />
       <IntroSummary />
       <IntroBox />
-      <Divider num='one' />
       <ScrollTrigger onProgress={handleProgressColors} />
       <PortfolioItem name='drafty'
         url='https://drafty.cc'
@@ -47,7 +45,6 @@ const IndexPage = () => {
         box='three' />
 
       <ScrollTrigger onProgress={handleProgressDark} />
-      <Divider num='two' />
       <ScrollTrigger onProgress={handleProgressStars} />
       <PhotoshopBox />
       <PhotoshopGrid />
