@@ -21,9 +21,11 @@
         font-size: 2rem;
         font-size: clamp(1.8rem, 2rem, 7vw);
 
-        @media (max-width: mobile) {
-            font-size: 1.8rem;
-            font-size: clamp(1.8rem, 1.8rem, 7vw);
+        @media (max-width: $mobile) {
+            line-height: 1.7rem;
+            line-height: clamp(1.7rem, 1.7rem, 6vw);
+            font-size: 1.6rem;
+            font-size: clamp(1.6rem, 1.6rem, 6vw);
         }
 
         &--inactive,

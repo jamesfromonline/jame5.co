@@ -19,12 +19,21 @@
 	}
 
 	&__introbox {
-		height: 100vh;
+		height: 90vh;
+		justify-content: flex-start;
+
+		@media (max-width: $mobile) {
+			height: 130vh;
+		}
 	}
 
 	&__photoshop-box {
-		height: 100vh;
+		height: 90vh;
 		justify-content: flex-end;
+
+		@media (max-width: $mobile) {
+			height: 130vh;
+		}
 	}
 
 	&__box {
