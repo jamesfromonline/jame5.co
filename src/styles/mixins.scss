@@ -28,3 +28,24 @@
     background: url($url) no-repeat $position;
     background-size: $size;
   }
+
+  @mixin position($p: absolute, $t: 0, $l: 0, $r: false, $b: false) {
+    position: $p;
+    top: $t;
+    left: $l;
+
+    @if $r != false {
+      right: $r;
+    }
+
+    @if $b != false {
+      bottom: $b;
+    }
+  }
+
+  @mixin font-clamp($v1, $v2, $v3) {
+    font-size: $v2;
+    line-height: $v2;
+    font-size: clamp($v1, $v2, $v3);
+    line-height: clamp($v1, $v2, $v3);
+  }

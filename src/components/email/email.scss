@@ -5,9 +5,7 @@
     padding: 0 10px;
 
     &__background {
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include position();
         @include size(100%);
     }
 
@@ -32,12 +30,10 @@
         &--active {
             &::before {
                 content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
+                @include position();
+                width: 100%;
                 transform: translate(0, 0);
                 color: $blue;
-                width: 100%;
                 mix-blend-mode: screen;
                 z-index: -1;
                 transition: all .1s ease-in-out;
@@ -45,6 +41,7 @@
 
             &::after {
                 content: '';
+                @include position();
                 position: absolute;
                 top: 0;
                 left: 0;

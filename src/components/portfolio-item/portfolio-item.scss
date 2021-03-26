@@ -25,20 +25,19 @@
 		}
 
 		h2 {
+			margin: 0;
+			padding: 0 5px;
+			@include font-clamp(4rem, 5rem, 7vw);
 			font-family: $font;
-			font-size: clamp(4rem, 5rem, 7vw);
-			line-height: clamp(4rem, 5rem, 7vw);
 			color: $black;
 			font-weight: 900;
 			border: 0;
-			margin: 0;
-			padding: 0 5px;
 			border-bottom: 12px solid;
 			border-image: url('/portfolio/underline.svg');
 			border-image-slice: 125;
 
 			@media (max-width: $mobile) {
-				font-size: clamp(3.5rem, 4.5rem, 7vw);
+				@include font-clamp(3.5rem, 4.5rem, 7vw);
 				text-align: center;
 				border-bottom-width: 8px;
 			}
@@ -51,9 +50,7 @@
 
 				&::before {
 					content: attr(data-text);
-					position: absolute;
-					top: 0;
-					left: 0;
+					@include position();
 					transform: translate(0, 8px);
 					color: $blue;
 					width: 100%;
@@ -64,9 +61,7 @@
 
 				&::after {
 					content: attr(data-text);
-					position: absolute;
-					top: 0;
-					left: 0;
+					@include position();
 					transform: translate(0, 8px);
 					color: $pink;
 					width: 100%;
@@ -129,9 +124,7 @@
 		}
 
 		&-blob {
-			position: absolute;
-			top: 0;
-			left: 0;
+			@include position();
 			@include size();
 			overflow: hidden;
 		}
@@ -157,9 +150,7 @@
 	}
 
 	&__box {
-		position: absolute;
-		top: 0;
-		left: 0;
+		@include position();
 		@include size();
 		z-index: 0;
 

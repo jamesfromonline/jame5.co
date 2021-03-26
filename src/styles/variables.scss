@@ -2,14 +2,18 @@ $cream: #F6EDD4;
 $black: #111111;
 $blue: #86ccf8;
 $pink: #ec86f8;
+
 $font: "Lato";
-
-$mobile: 585px;
-$tablet: 811px;
-
 $text-shadow: 2px;
 $text-shadow--inverted: -2px;
 
+$tablet: 811px;
+$mobile: 585px;
+$mobile--small: 375px;
+
 $bezier: cubic-bezier(.72,.24,.83,.56);
+$transition-main: all .1s $bezier;
 
 $icon-size: 200px;
+
+$skills: ('javascript': 0, 'react': 0.1s, 'gatsby': 0.2s, 'photoshop': 0.3s);

@@ -1,9 +1,7 @@
 .text {
 	font-family: $font;
 	color: $black;
-	font-size: 2.5rem;
-	font-size: clamp(2.5rem, 3rem, 7vw);
-	line-height: clamp(2.5rem, 3rem, 7vw);
+	@include font-clamp(2.5rem, 3rem, 7vw);
 	z-index: 1;
 
 	&--display {
@@ -14,10 +12,7 @@
 		max-width: 800px;
 
 		@media (max-width: $mobile) {
-			font-size: 2rem;
-			line-height: 2rem;
-			font-size: clamp(2rem, 2rem, 7vw);
-			line-height: clamp(2rem, 2rem, 7vw);
+			@include font-clamp(2rem, 2rem, 7vw);
 		}
 	}
 
@@ -27,9 +22,7 @@
 	}
 
 	&--regular {
-		font-size: 1.3rem;
-		font-size: clamp(1.3rem, 1.8rem, 4vw);
-		line-height: clamp(1.3rem, 1.8rem, 4vw);
+		@include font-clamp(1.3rem, 1.8rem, 4vw);
 		margin: 0;
 	}
 

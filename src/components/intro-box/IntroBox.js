@@ -3,16 +3,16 @@ import ScrollTrigger from 'react-scroll-trigger'
 import SkillIcons from '../skill-icons/SkillIcons'
 
 const IntroBox = () => {
-  const [isIntroAnimationToggled, setIsIntroAnimationToggled] = useState(false)
+  const [animate, setAnimate] = useState(false)
   const intro = useRef(null)
 
-  const toggleIntroAnimation = () => {
-    if (!isIntroAnimationToggled) {
+  const toggleAnimation = () => {
+    if (!animate) {
       intro.current.classList.add('skills-section--active')
     } else {
       intro.current.classList.remove('skills-section--active')
     }
-    setIsIntroAnimationToggled(!isIntroAnimationToggled)
+    setAnimate(!animate)
   }
 
   return (
@@ -28,7 +28,7 @@ const IntroBox = () => {
               <span className='text__hover text__hover--pink'> photoshop</span>,
               and <span className='text__hover text__hover--blue'>node</span>.
             </p>
-        <ScrollTrigger onEnter={toggleIntroAnimation} onExit={toggleIntroAnimation} />
+        <ScrollTrigger onEnter={toggleAnimation} onExit={toggleAnimation} />
         <div className='section__box-svg grit' />
       </div>
     </section>

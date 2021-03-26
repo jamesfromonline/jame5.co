@@ -1,99 +1,35 @@
 .skills-section{
     &--active {
-        .skill-icon--javascript,
-        .skill-icon--react,
-        .skill-icon--gatsby,
-        .skill-icon--photoshop {
-            transform: scale(1.02);
+
+        @each $skill, $delay in $skills {
+            .skill-icon--#{$skill} {
+                transform: scale(1.02);
+                transition-delay: $delay;
+            }
+
+            .skill-icon--#{$skill}-blue {
+                transform: translate(4px, 4px);
+                transition-delay: $delay;
+            }
+
+            .skill-icon--#{$skill}-pink {
+                transform: translate(-4px, -4px);
+                transition-delay: $delay;
+            }
         }
-
-        .skill-icon--react {
-            transition-delay: .1s
-        }
-
-        .skill-icon--gatsby {
-            transition-delay: .2s;
-        }
-
-        .skill-icon--photoshop {
-            transition-delay: .3s;
-        }
-
-        .skill-icon--javascript-blue,
-        .skill-icon--react-blue,
-        .skill-icon--gatsby-blue,
-        .skill-icon--photoshop-blue {
-            transform: translate(4px, 4px);
-        }
-
-        .skill-icon--react-blue {
-            transition-delay: .1s;
-        }
-
-        .skill-icon--gatsby-blue {
-            transition-delay: .2s;
-        }
-
-        .skill-icon--photoshop-blue {
-            transition-delay: .3s;
-        }
-
-        .skill-icon--javascript-pink,
-        .skill-icon--react-pink,
-        .skill-icon--gatsby-pink,
-        .skill-icon--photoshop-pink {
-            transform: translate(-4px, -4px);
-        }
-
-        .skill-icon--react-pink {
-            transition-delay: .1s;
-        }
-
-        .skill-icon--gatsby-pink {
-            transition-delay: .2s;
-        }
-
-        .skill-icon--photoshop-pink {
-            transition-delay: .3s;
-        }
-
-
 
         .text__hover {
-            transition-delay: .5s;
-            text-shadow: $text-shadow $text-shadow 0px $blue, $text-shadow--inverted $text-shadow--inverted 0px $pink;
+            transition-delay: 0.5 + unquote('s');
+            text-shadow: $text-shadow $text-shadow 0px $blue,
+                         $text-shadow--inverted $text-shadow--inverted 0px $pink;
 
-
-            &:nth-child(2) {
-                transition-delay: .8s;
-                text-shadow: $text-shadow $text-shadow 0px $blue, $text-shadow--inverted $text-shadow--inverted 0px $pink;
-            }
-
-            &:nth-child(3) {
-                transition-delay: 1.1s;
-                text-shadow: $text-shadow $text-shadow 0px $blue, $text-shadow--inverted $text-shadow--inverted 0px $pink;
-            }
-
-            &:nth-child(4) {
-                transition-delay: 1.4s;
-                text-shadow: $text-shadow $text-shadow 0px $blue, $text-shadow--inverted $text-shadow--inverted 0px $pink;
-            }
-
-            &:nth-child(5) {
-                transition-delay: 1.7s;
-                text-shadow: $text-shadow $text-shadow 0px $blue, $text-shadow--inverted $text-shadow--inverted 0px $pink;
-            }
-
-            &:nth-child(6) {
-                transition-delay: 2s;
-                text-shadow: $text-shadow $text-shadow 0px $blue, $text-shadow--inverted $text-shadow--inverted 0px $pink;
-            }
-
-            &:last-child {
-                transition-delay: 2.3s;
-                text-shadow: $text-shadow $text-shadow 0px $pink, $text-shadow--inverted $text-shadow--inverted 0px $blue;
+            @for $i from 1 through 6 {
+                &:nth-child(#{$i}) {
+                    transition-delay: (0.5 + (0.3 * $i)) + unquote('s');
+                    text-shadow: $text-shadow $text-shadow 0px $blue,
+                                 $text-shadow--inverted $text-shadow--inverted 0px $pink;
+                }
             }
         }
     }
-
 }

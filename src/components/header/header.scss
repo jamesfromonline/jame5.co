@@ -1,20 +1,20 @@
 header {
 	@include flex($flex-direction: column, $justify-content: center, $align-items: center);
 	position: relative;
-	padding-top: 20px;
+	width: 100%;
 	margin: 0;
+	padding-top: 20px;
 	border-top: 0;
 	border-left: 0;
 	border-right: 0;
-	width: 100%;
 	text-transform: uppercase;
 	z-index: 1;
 
-	@media (max-width: 585px) {
+	@media (max-width: $mobile) {
 		min-height: 300px;
 	}
 
-	@media (max-width: 811px) {
+	@media (max-width: $tablet) {
 		flex-direction: column;
 	}
 }
@@ -22,17 +22,15 @@ header {
 .header__logo {
 	@include size(100%, 165px);
 	@include background('/svg/james-logo.svg', center, cover);
+	max-width: 600px;
 	margin-bottom: 6rem;
 	color: $black;
 	z-index: 2;
-	max-width: 600px;
 
 }
 
 .header__svg {
-	position: absolute;
-	top: 0;
-	left: 0;
+	@include position();
 	@include size(100%, 100%);
 	@include background('/svg/header.svg', top, cover);
 

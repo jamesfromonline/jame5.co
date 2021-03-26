@@ -3,11 +3,10 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 0;
     justify-items: center;
-    align-items: center;
     width: 100%;
     max-width: 800px;
 
-    @media (max-width: 585px) {
+    @media (max-width: $mobile) {
         padding: 0 10px;
     }
 }
@@ -18,20 +17,22 @@
 	position: relative;
 	z-index: 2;
 
-	@media (max-width: 811px) {
+	@media (max-width: $tablet) {
 		@include size(100px);
 	}
 
-	@media (max-width: 585px) {
+	@media (max-width: $mobile) {
 		@include size(85px);
 	}
 
-	@media (max-width: 375px) {
+	@media (max-width: $mobile--small) {
 		@include size(70px);
 	}
+}
 
-	&--javascript {
-		@include background('/svg/javascript.svg');
+@each $skill, $_ in $skills {
+	.skill-icon--#{$skill} {
+		@include background("/svg/#{$skill}.svg");
 		@include size();
 		position: relative;
 		transform: scale(1);
@@ -39,126 +40,23 @@
 		z-index: 2;
 
 		&-blue {
-			@include background('/svg/javascript-blue.svg');
+			@include background("/svg/#{$skill}-blue.svg");
 			@include size();
-			position: absolute;
+			@include position();
 			mix-blend-mode: screen;
-			top: 0;
-			left: 0;
 			transform: translate(0);
-			z-index: 1;
 			transition: all .2s $bezier;
+			z-index: 1;
 		}
 
 		&-pink {
-			@include background('/svg/javascript-pink.svg');
+			@include background("/svg/#{$skill}-pink.svg");
 			@include size();
-			position: absolute;
+			@include position();
 			mix-blend-mode: screen;
-			top: 0;
-			left: 0;
 			transform: translate(0);
-			z-index: 1;
 			transition: all .2s $bezier;
-		}
-	}
-
-	&--gatsby {
-		@include background('/svg/gatsby.svg');
-		position: relative;
-		@include size();
-		transform: scale(1);
-		transition: all .2s $bezier;
-		z-index: 2;
-
-		&-blue {
-			@include background('/svg/gatsby-blue.svg');
-			@include size();
-			position: absolute;
-			mix-blend-mode: screen;
-			top: 0;
-			left: 0;
-			transform: translate(0);
 			z-index: 1;
-			transition: all .2s $bezier;
-		}
-
-		&-pink {
-			@include background('/svg/gatsby-pink.svg');
-			@include size();
-			position: absolute;
-			mix-blend-mode: screen;
-			top: 0;
-			left: 0;
-			transform: translate(0);
-			z-index: 1;
-			transition: all .2s $bezier;
-		}
-	}
-
-	&--react {
-		@include background('/svg/react.svg');
-		@include size();
-		position: relative;
-		transform: scale(1);
-		transition: all .2s $bezier;
-		z-index: 2;
-
-		&-blue {
-			@include background('/svg/react-blue.svg');
-			@include size();
-			position: absolute;
-			mix-blend-mode: screen;
-			top: 0;
-			left: 0;
-			transform: translate(0);
-			z-index: 1;
-			transition: all .2s $bezier;
-		}
-
-		&-pink {
-			@include background('/svg/react-pink.svg');
-			@include size();
-			position: absolute;
-			mix-blend-mode: screen;
-			top: 0;
-			left: 0;
-			transform: translate(0);
-			z-index: 1;
-			transition: all .2s $bezier;
-		}
-	}
-
-	&--photoshop {
-		@include background('/svg/photoshop.svg');
-		@include size();
-		position: relative;
-		transform: scale(1);
-		transition: all .2s $bezier;
-		z-index: 2;
-
-		&-blue {
-			@include background('/svg/photoshop-blue.svg');
-			@include size();
-			position: absolute;
-			mix-blend-mode: screen;
-			top: 0;
-			left: 0;
-			transform: translate(0);
-			z-index: 1;
-			transition: all .2s $bezier;
-		}
-
-		&-pink {
-			@include background('/svg/photoshop-pink.svg');
-			@include size();
-			position: absolute;
-			mix-blend-mode: screen;
-			top: 0;
-			left: 0;
-			transform: translate(0);
-			z-index: 1;
-			transition: all .2s $bezier;
 		}
 	}
 }
