@@ -32,7 +32,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
+  "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop -H 0.0.0.0",
