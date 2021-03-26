@@ -28,10 +28,9 @@ const IntroBox = () => {
               <span className='text__hover text__hover--pink'> photoshop</span>,
               and <span className='text__hover text__hover--blue'>node</span>.
             </p>
-
+        <ScrollTrigger onEnter={toggleIntroAnimation} onExit={toggleIntroAnimation} />
         <div className='section__box-svg grit' />
       </div>
-      <ScrollTrigger onEnter={toggleIntroAnimation} onExit={toggleIntroAnimation} />
     </section>
   )
 }

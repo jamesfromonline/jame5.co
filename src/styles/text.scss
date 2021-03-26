@@ -14,8 +14,10 @@
 		max-width: 800px;
 
 		@media (max-width: $mobile) {
-			font-size: clamp(2.2rem, 2.2rem, 7vw);
-			line-height: clamp(2.2rem, 2.2rem, 7vw);
+			font-size: 2rem;
+			line-height: 2rem;
+			font-size: clamp(2rem, 2rem, 7vw);
+			line-height: clamp(2rem, 2rem, 7vw);
 		}
 	}
 

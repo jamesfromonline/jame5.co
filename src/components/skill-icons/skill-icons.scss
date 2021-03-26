@@ -26,6 +26,10 @@
 		@include size(85px);
 	}
 
+	@media (max-width: 375px) {
+		@include size(70px);
+	}
+
 	&--javascript {
 		@include background('/svg/javascript.svg');
 		@include size();
