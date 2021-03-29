@@ -13,9 +13,9 @@ import Footer from '../components/footer/Footer'
 const IndexPage = () => {
   const [progressColors, setProgressColors] = useState(0)
   const [progressStars, setProgressStars] = useState(0)
-  const handleProgressColors = ({ progress }) => setProgressColors(progress.toFixed(4))
-  const handleProgressDark = ({ progress }) => setProgressColors(1 - progress.toFixed(2))
-  const handleProgressStars = ({ progress }) => setProgressStars(progress.toFixed(4))
+  const handleProgressColors = ({ progress }) => setTimeout(() => setProgressColors(progress.toFixed(4)), 100)
+  const handleProgressDark = ({ progress }) => setTimeout(() => setProgressColors(1 - progress.toFixed(2)), 100)
+  const handleProgressStars = ({ progress }) => setTimeout(() => setProgressStars(progress.toFixed(4)), 100)
 
   useEffect(() => {
     console.log('%clinkedin: https://linkedin.com/in/jamesfromonline', 'color: #fefefe; background-color: #0072b1; font-weight: bold; padding: 10px')
