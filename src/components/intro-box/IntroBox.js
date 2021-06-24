@@ -23,8 +23,8 @@ const IntroBox = () => {
           i like to create unique projects using tools like
               <span className='text__hover text__hover--pink'> javascript</span>,
               <span className='text__hover text__hover--blue'> react</span>,
-              <span className='text__hover text__hover--pink'> gatsby</span>,
-              <span className='text__hover text__hover--blue'> css/scss</span>,
+              <span className='text__hover text__hover--pink'> graphql</span>,
+              <span className='text__hover text__hover--blue'> css</span>,
               <span className='text__hover text__hover--pink'> photoshop</span>,
               and <span className='text__hover text__hover--blue'>node</span>.
             </p>

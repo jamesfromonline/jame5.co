@@ -5,7 +5,7 @@ const SkillIcons = () => (
     <div className='skills'>
         <SkillIcon skill='javascript' />
         <SkillIcon skill='react' />
-        <SkillIcon skill='gatsby' />
+        <SkillIcon skill='graphql' />
         <SkillIcon skill='photoshop' />
     </div>
 )
