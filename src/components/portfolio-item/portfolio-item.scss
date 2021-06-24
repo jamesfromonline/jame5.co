@@ -115,6 +115,13 @@
 				z-index: 4;
 			}
 
+			&--mepage {
+				@include background('/portfolio/mepage.svg');
+				@include size(32%);
+				padding: 10px;
+				z-index: 4;
+			}
+
 			&--zalories {
 				@include background('/portfolio/zalories.svg');
 				@include size(35%);

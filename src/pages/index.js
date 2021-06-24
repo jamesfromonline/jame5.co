@@ -29,20 +29,20 @@ const IndexPage = () => {
       <IntroSummary />
       <IntroBox />
       <ScrollTrigger onProgress={handleProgressColors} />
+      <PortfolioItem name='mepage'
+        url='https://mepage.is'
+        description='a central source for user links and social content.'
+        box='three' />
+
       <PortfolioItem name='drafty'
         url='https://drafty.cc'
-        description='a webapp for people to write, format, and save notes, jokes, ideas, and anything in between.'
+        description='a platform for writers to draft, format, and save their ideas and projects.'
         box='one' />
 
       <PortfolioItem name='zalories'
         url='https://zalories.jame5.co'
-        description='a super simple calorie tracking webapp.'
+        description='dead simple calorie tracking for minimalist enthusiasts.'
         box='two' />
-
-      <PortfolioItem name='nrdstr'
-        url='https://nrdstr.com'
-        description='a digital design agency that offers graphic design, website design and development, and more.'
-        box='three' />
 
       <ScrollTrigger onProgress={handleProgressDark} />
       <ScrollTrigger onProgress={handleProgressStars} />
