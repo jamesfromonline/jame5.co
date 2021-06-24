@@ -46,7 +46,7 @@ const IndexPage = () => {
 
       <ScrollTrigger onProgress={handleProgressDark} />
       <ScrollTrigger onProgress={handleProgressStars} />
-      <PhotoshopBox />
+      {/* <PhotoshopBox /> */}
       <PhotoshopGrid />
       <Footer />
     </Layout>
