@@ -32,6 +32,11 @@
   "keywords": [
     "gatsby"
   ],
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "build": "gatsby build",
