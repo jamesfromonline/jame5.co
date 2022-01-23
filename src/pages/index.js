@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ScrollTrigger from 'react-scroll-trigger'
@@ -6,7 +6,6 @@ import Header from '../components/header/Header'
 import IntroSummary from '../components/intro-summary/IntroSummary'
 import IntroBox from '../components/intro-box/IntroBox'
 import PortfolioItem from '../components/portfolio-item/PortfolioItem'
-import PhotoshopBox from "../components/photoshop/PhotoshopBox"
 import PhotoshopGrid from "../components/photoshop/PhotoshopGrid"
 import Footer from '../components/footer/Footer'
 
@@ -17,11 +16,6 @@ const IndexPage = () => {
   const handleProgressDark = ({ progress }) => setTimeout(() => setProgressColors(1 - progress.toFixed(2)), 100)
   const handleProgressStars = ({ progress }) => setTimeout(() => setProgressStars(progress.toFixed(4)), 100)
 
-  useEffect(() => {
-    console.log('%clinkedin: https://linkedin.com/in/jamesfromonline', 'color: #fefefe; background-color: #0072b1; font-weight: bold; padding: 10px')
-    console.log('%cresume: https://jame5.co/JamesOBrien_Resume.pdf', 'color: #fefefe; background-color: #111; font-weight: bold; padding: 10px')
-  }, [])
-
   return (
     <Layout progressColors={progressColors} progressStars={progressStars}>
       <SEO title="Web Development and Graphic Dabblery" />
@@ -31,7 +25,7 @@ const IndexPage = () => {
       <ScrollTrigger onProgress={handleProgressColors} />
       <PortfolioItem name='mepage'
         url='https://mepage.is'
-        description='a central source for user links and social content.'
+        description='supercharge your online presence with one sweet link.'
         box='three' />
 
       <PortfolioItem name='drafty'

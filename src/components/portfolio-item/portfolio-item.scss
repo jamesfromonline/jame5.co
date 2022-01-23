@@ -32,9 +32,9 @@
 			color: $black;
 			font-weight: 900;
 			border: 0;
-			border-bottom: 12px solid;
-			border-image: url('/portfolio/underline.svg');
-			border-image-slice: 125;
+			// border-bottom: 12px solid;
+			// border-image: url('/portfolio/underline.svg');
+			// border-image-slice: 105;
 
 			@media (max-width: $mobile) {
 				@include font-clamp(3.5rem, 4.5rem, 7vw);
@@ -44,6 +44,7 @@
 
 			a {
 				position: relative;
+				top: -8px;
 				text-decoration: none;
 				color: $black;
 				z-index: 1;

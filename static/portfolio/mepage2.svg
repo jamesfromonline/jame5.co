@@ -1,0 +1,23 @@
+<svg id="Regular" xmlns="http://www.w3.org/2000/svg" width="834" height="786" viewBox="0 0 834 786">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fffbfe;
+        stroke-width: 70.18px;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fffbfe;
+      }
+    </style>
+  </defs>
+  <g id="SQUARES">
+    <path id="SOLID_SQUARE_copy_3" data-name="SOLID SQUARE copy 3" class="cls-1" d="M249.237,51.066h207.93c110.457,0,200,89.544,200,200V459c0,110.457-89.543,200-200,200H249.237c-110.457,0-200-89.543-200-200V251.066C49.237,140.61,138.78,51.066,249.237,51.066Z"/>
+    <path id="SOLID_SQUARE_copy_2" data-name="SOLID SQUARE copy 2" class="cls-2" d="M449.445,209.434H615.594c110.457,0,200,89.543,200,200V575.583c0,110.456-89.543,200-200,200H449.445c-110.457,0-200-89.544-200-200V409.434C249.445,298.977,338.988,209.434,449.445,209.434Z"/>
+  </g>
+</svg>
